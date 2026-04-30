@@ -16,7 +16,7 @@ class NodeTest
 		{
 			c=c+1;
 			cur=new Node();
-			System.out.println("enter node: "+c+" data");
+			System.out.println("enter node"+c+" data");
 			cur.data=sc.nextInt();
 			cur.next=null;
 			if(head==null)

@@ -38,11 +38,11 @@ class Test
 		ob.x=10;
 		obj.x=20;
 		ob.y=5;
-		obj.y=15;
+		obj.y=5;
 		System.out.println(ob.x +" "+ obj.y);
 		System.out.println(ob.y +" "+ obj.x);
 		ob.z=30;
-		obj.z=0; 
+		obj.z=88; 
 		System.out.println(ob.z +" "+ obj.z +" "+ A.z);
 	}
 }
