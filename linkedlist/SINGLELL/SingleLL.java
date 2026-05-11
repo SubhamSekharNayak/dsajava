@@ -6,7 +6,7 @@ class Node
 }
 class SL
 {
-	static Node head; //this means SL HAS a Node
+	static Node head; //this means SL HAS Node
 	static void create()
 	{
 		Scanner sc=new Scanner(System.in);

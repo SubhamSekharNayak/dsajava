@@ -4,7 +4,7 @@ class Node
 	int data;
 	Node next;
 }
-class NodeTest
+class SingleLLn
 {
 	public static void main(String args[])
 	{
