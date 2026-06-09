@@ -1,4 +1,4 @@
-//Binary Tree Creation without using recursion(By userdefined Queue)
+//Binary Tree Creation without using recursion(By predefined Queue)
 import java.util.*;
 
 class Node 
@@ -12,45 +12,14 @@ class Node
         left = right = null;
     }
 }
-class Queue {
-    int front, rear, size;
-    Node arr[];
-
-    Queue(int capacity) {
-        size = capacity;
-        arr = new Node[size];
-        front = 0;
-        rear = -1;
-    }
-
-    boolean isEmpty() {
-        return front > rear;
-    }
-
-    void enqueue(Node x) {
-        if (rear == size - 1) {
-            System.out.println("Queue Overflow");
-            return;
-        }
-        arr[++rear] = x;
-    }
-
-    Node dequeue() {
-        if (isEmpty()) {
-            System.out.println("Queue Underflow");
-            return null;
-        }
-        return arr[front++];
-    }
-}
-class BinaryTree
+class BinaryTreewur
 {
     Node root;
     
     Node create() 
     {
         Scanner sc = new Scanner(System.in);
-        Queue q = new Queue(8);
+        Queue<Node> q = new LinkedList<>();
 
         System.out.print("Enter root value: ");
         int data = sc.nextInt();
@@ -58,10 +27,10 @@ class BinaryTree
         if (data == -1) return null;
 
         root = new Node(data);
-        q.enqueue(root);
+        q.add(root);
 
         while (!q.isEmpty()) {
-            Node current = q.dequeue();
+            Node current = q.remove();
 
             // Left child
             System.out.print("Enter left child of " + current.data + " (-1 for no node): ");
@@ -69,7 +38,7 @@ class BinaryTree
 
             if (leftData != -1) {
                 current.left = new Node(leftData);
-                q.enqueue(current.left);
+                q.add(current.left);
             }
 
             // Right child
@@ -78,11 +47,12 @@ class BinaryTree
 
             if (rightData != -1) {
                 current.right = new Node(rightData);
-                q.enqueue(current.right);
+                q.add(current.right);
             }
         }
 
-        return root;
+        return root;        
+
     }
     void inorder(Node root) 
     {
@@ -115,7 +85,7 @@ class BinaryTree
 
     public static void main(String[] args) 
     {
-        BinaryTree tree = new BinaryTree();
+        BinaryTreewur tree = new BinaryTreewur();
 
         tree.root = tree.create();
 
@@ -129,6 +99,3 @@ class BinaryTree
         tree.postorder(tree.root);
     }
 }
-
-
-
