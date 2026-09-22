@@ -512,30 +512,30 @@
 
 
 //Prime Number (Without static variable)
-class Test
-{
-    static boolean isPrime(int no, int i)
-    {
-        if(i == 1)
-            return true;
+// class Test
+// {
+//     static boolean isPrime(int no, int i)
+//     {
+//         if(i == 1)
+//             return true;
 
-        if(no % i == 0)
-            return false;
+//         if(no % i == 0)
+//             return false;
 
-        return isPrime(no, i-1);
-    }
+//         return isPrime(no, i-1);
+//     }
 
-    public static void main(String args[])
-    {
-        int n = 7;
+//     public static void main(String args[])
+//     {
+//         int n = 7;
 
-        if(n <= 1)
-            System.out.println("Not Prime");
-        else if(isPrime(n, n/2))
-            System.out.println("Prime Number");
-        else
-            System.out.println("Not Prime");
-    }
-}
+//         if(n <= 1)
+//             System.out.println("Not Prime");
+//         else if(isPrime(n, n/2))
+//             System.out.println("Prime Number");
+//         else
+//             System.out.println("Not Prime");
+//     }
+// }
 // o/p:-
 // Prime Number
